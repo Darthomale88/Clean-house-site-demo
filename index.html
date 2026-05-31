@@ -260,7 +260,23 @@
     .step p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
     .area-about {
-      background: rgba(195, 188, 176, 0);
+            /* Path to your image */
+        background-image: url('Images/Indianapolis.jpg');
+        
+        /* This creates the fixed effect */
+        background-attachment: fixed;
+        
+        /* Ensure the image covers the entire section */
+        background-size: cover;
+        
+        /* Center the image within the section */
+        background-position: center;
+        
+        /* Prevent the image from tiling */
+        background-repeat: no-repeat;
+        
+        /* Minimum height so the section is visible */
+        min-height: 500px;
     }
     .split-grid {
       display: grid;

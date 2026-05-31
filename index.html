@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean House Power Washing | Indianapolis Area Exterior Cleaning</title>
+  <meta name="description" content="Clean House Power Washing provides house washing, driveway cleaning, sidewalk cleaning, deck cleaning, patio cleaning, and fence cleaning in Carmel, Noblesville, Indianapolis, Plainfield, and Danville." />
+  <style>
+    :root {
+      --blue-dark: #005E88;
+      --blue-mid: #618791;
+      --gray-dark: #5C5B55;
+      --tan: #C3BCB0;
+      --black: #000000;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --text: #1f2937;
+      --muted: #5C5B55;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid rgba(195,188,176,0.5);
+      backdrop-filter: blur(10px);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--blue-dark);
+      font-size: 1.05rem;
+      white-space: nowrap;
+    }
+    .brand img {
+      width: 42px;
+      height: auto;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .nav-links a { color: var(--gray-dark); }
+    .nav-links a:hover { color: var(--blue-dark); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-weight: 800;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 0;
+    }
+    .btn-primary {
+      background: var(--blue-dark);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(0, 94, 136, 0.22);
+    }
+    .btn-primary:hover { background: #004b6d; transform: translateY(-1px); }
+    .btn-primary:active { transform: scale(0.97); }
+    .btn-secondary {
+      color: var(--blue-dark);
+      border: 2px solid var(--blue-dark);
+      background: transparent;
+    }
+    .btn-secondary:hover { background: #eaf3f6; }
+
+    section { scroll-margin-top: 84px; }
+
+    .hero {
+      background: var(--off-white);
+      padding: 90px 0;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--blue-mid);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 { line-height: 1.12; margin: 0; color: #111827; }
+    h1 {
+      font-size: clamp(2.35rem, 5vw, 4.6rem);
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 16px; }
+    .trust-line { font-size: 0.95rem; color: var(--gray-dark); font-weight: 700; }
+    .hero-card {
+      background: var(--tan);
+      border-radius: 28px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .image-placeholder {
+      min-height: 390px;
+      border-radius: 20px;
+      background: var(--white);
+      border: 1px solid rgba(255,255,255,0.7);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 35px;
+      color: var(--gray-dark);
+    }
+    .image-placeholder strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .section-padding { padding: 86px 0; }
+    .section-header { max-width: 720px; margin-bottom: 42px; }
+    .section-header.center { text-align: center; margin-left: auto; margin-right: auto; }
+    .section-header p { color: var(--muted); font-size: 1.08rem; margin: 0; }
+
+    .services-grid, .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(195,188,176,0.55);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      transition: all 0.2s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(0,0,0,0.08); }
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: #eaf3f6;
+      color: var(--blue-dark);
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+    }
+    .card p { margin: 0; color: var(--muted); }
+
+    .results {
+      background: var(--black);
+      color: var(--white);
+    }
+    .results h2 { color: var(--white); }
+    .results .section-header p { color: rgba(255,255,255,0.75); }
+    .results .eyebrow { color: #9fc3cc; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .gallery-item {
+      aspect-ratio: 4 / 3;
+      border-radius: 18px;
+      background: var(--gray-dark);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .why { background: var(--off-white); }
+    .closing-line {
+      text-align: center;
+      color: var(--blue-dark);
+      font-weight: 800;
+      margin-top: 34px;
+      font-size: 1.05rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+    .step {
+      background: var(--off-white);
+      border: 1px solid rgba(195,188,176,0.6);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--blue-dark);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .step p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    .area-about {
+      background: rgba(195,188,176,0.35);
+    }
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .city {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: var(--blue-dark);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+    .about-card {
+      background: var(--white);
+      border: 1px solid rgba(195,188,176,0.6);
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    .about-card p { color: var(--muted); margin-bottom: 0; }
+
+    .contact {
+      background: var(--blue-dark);
+      color: var(--white);
+      text-align: center;
+    }
+    .contact h2 { color: var(--white); }
+    .contact p { color: rgba(255,255,255,0.78); font-size: 1.08rem; }
+    .contact .btn { background: var(--white); color: var(--blue-dark); margin-top: 12px; }
+    .contact .btn:hover { background: var(--off-white); }
+
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.7);
+      padding: 28px 0;
+      font-size: 0.9rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-grid, .split-grid { grid-template-columns: 1fr; }
+      .services-grid, .trust-grid, .gallery { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { padding: 70px 0; }
+      .image-placeholder { min-height: 280px; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .brand span { display: none; }
+      .services-grid, .trust-grid, .gallery, .process-grid, .city-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .section-padding { padding: 68px 0; }
+      .nav-inner { padding: 12px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <!-- Replace logo.png with your actual logo file name -->
+        <img src="images/logo.png" alt="Clean House Power Washing logo" onerror="this.style.display='none'" />
+        <span>Clean House Power Washing</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#results">Before & After</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-primary" href="tel:3173169020">Call Now</a>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="fade-in">
+        <div class="eyebrow">Residential Exterior Cleaning • Free Estimates</div>
+        <h1>House Washing That Restores Your Home’s Curb Appeal</h1>
+        <p class="lead">Remove algae, dirt, and buildup from your home, driveway, sidewalks, decks, patios, and fences. Serving Carmel, Noblesville, Indianapolis, Plainfield, and Danville.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:3173169020">Call for a Free Estimate</a>
+          <a class="btn btn-secondary" href="#results">View Before & After</a>
+        </div>
+        <div class="trust-line">Free estimates • In business since 2018 • Pay upon completion</div>
+      </div>
+      <div class="hero-card fade-in">
+        <!-- Replace this placeholder with: <img src="images/hero.jpg" alt="Clean house after professional power washing"> -->
+        <div class="image-placeholder">
+          <div>
+            <strong>Hero Photo Here</strong>
+            Use a real house wash, driveway, or before/after transformation image.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Services</div>
+        <h2>Clean exteriors. Better first impressions.</h2>
+        <p>From algae-covered siding to dirty concrete, Clean House Power Washing helps homeowners restore the look of their property.</p>
+      </div>
+      <div class="services-grid">
+        <div class="card"><div class="icon">🏠</div><h3>House Washing</h3><p>Remove algae, dirt, and buildup to restore your home’s curb appeal.</p></div>
+        <div class="card"><div class="icon">💧</div><h3>Driveways</h3><p>Clean stained concrete and give your property a brighter first impression.</p></div>
+        <div class="card"><div class="icon">🚶</div><h3>Sidewalks</h3><p>Clear away grime and buildup from high-traffic walking areas.</p></div>
+        <div class="card"><div class="icon">🪵</div><h3>Decks</h3><p>Refresh outdoor living spaces with careful exterior cleaning.</p></div>
+        <div class="card"><div class="icon">🌿</div><h3>Patios</h3><p>Restore patios and gathering areas so they look cleaner and more inviting.</p></div>
+        <div class="card"><div class="icon">🧱</div><h3>Fences</h3><p>Clean dirt and discoloration from exterior fencing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="section-padding results">
+    <div class="container">
+      <div class="section-header center">
+        <div class="eyebrow">Before & After</div>
+        <h2>See the Difference</h2>
+        <p>Real results should do the selling. Add your strongest house wash, driveway, sidewalk, and patio transformations here.</p>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item">Add before/after image 1</div>
+        <div class="gallery-item">Add before/after image 2</div>
+        <div class="gallery-item">Add before/after image 3</div>
+        <div class="gallery-item">Add before/after image 4</div>
+        <div class="gallery-item">Add before/after image 5</div>
+        <div class="gallery-item">Add before/after image 6</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="section-padding why">
+    <div class="container">
+      <div class="section-header center">
+        <div class="eyebrow">Why Choose Us</div>
+        <h2>Why Homeowners Choose Clean House Power Washing</h2>
+        <p>We focus on quality work, property protection, and making sure every customer is satisfied from start to finish.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="card"><div class="icon">⏱️</div><h3>In Business Since 2018</h3><p>Serving homeowners with reliable exterior cleaning and visible results.</p></div>
+        <div class="card"><div class="icon">💵</div><h3>Free Estimates</h3><p>We walk your property and provide a clear estimate at no charge.</p></div>
+        <div class="card"><div class="icon">🛡️</div><h3>Property Protection</h3><p>We tape outlets, cover openings, check windows, and prep carefully before work begins.</p></div>
+        <div class="card"><div class="icon">📸</div><h3>Before & After Photos</h3><p>We document your property’s condition and the transformation after cleaning.</p></div>
+        <div class="card"><div class="icon">✅</div><h3>Final Walkthrough</h3><p>You review the finished work with us before the job is complete.</p></div>
+        <div class="card"><div class="icon">🤝</div><h3>Pay Upon Completion</h3><p>No upfront pressure. Payment is made after the work is done.</p></div>
+      </div>
+      <p class="closing-line">We treat your home like it’s our own — with care, attention, and respect from start to finish.</p>
+    </div>
+  </section>
+
+  <section id="process" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Our Process</div>
+        <h2>Simple steps. Clean results.</h2>
+        <p>A careful process helps protect your property and gives you confidence before, during, and after the job.</p>
+      </div>
+      <div class="process-grid">
+        <div class="step"><div class="step-number">1</div><h3>Free Estimate</h3><p>We visit the property, discuss the work, and provide a no-charge estimate.</p></div>
+        <div class="step"><div class="step-number">2</div><h3>Prep & Protect</h3><p>We explain safety measures, tape outlets, protect openings, and check windows.</p></div>
+        <div class="step"><div class="step-number">3</div><h3>Document</h3><p>We walk the property and take photos of existing damage and before conditions.</p></div>
+        <div class="step"><div class="step-number">4</div><h3>Clean</h3><p>We complete the house wash, driveway, sidewalk, deck, patio, or fence cleaning.</p></div>
+        <div class="step"><div class="step-number">5</div><h3>Final Walkthrough</h3><p>You inspect the completed work with us to make sure you’re satisfied.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding area-about">
+    <div class="container split-grid">
+      <div>
+        <div class="eyebrow">Service Area</div>
+        <h2>Proudly Serving the Indianapolis Area</h2>
+        <p class="lead">Clean House Power Washing serves homeowners in and around the Indianapolis area.</p>
+        <div class="city-grid">
+          <div class="city">📍 Carmel</div>
+          <div class="city">📍 Noblesville</div>
+          <div class="city">📍 Indianapolis</div>
+          <div class="city">📍 Plainfield</div>
+          <div class="city">📍 Danville</div>
+        </div>
+      </div>
+      <div class="about-card">
+        <h2>About Clean House Power Washing</h2>
+        <p>Since 2018, Clean House Power Washing has helped homeowners improve the appearance of their homes and outdoor surfaces. The owner especially enjoys house washing because of the visible transformation and the satisfaction of seeing the finished result.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-padding contact">
+    <div class="container">
+      <h2>Ready to Freshen Up Your Home’s Exterior?</h2>
+      <p>Call today for a free estimate and let’s get your property looking its best.</p>
+      <a class="btn" href="tel:3173169020">Call 317-316-9020</a>
+      <p>By appointment • Monday–Friday • 9 AM–3 PM • Check or cash accepted</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Clean House Power Washing</div>
+      <div>317-316-9020 • Facebook link coming soon</div>
+    </div>
+  </footer>
+</body>
+</html>
